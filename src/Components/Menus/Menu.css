@@ -1,6 +1,6 @@
 .navbar{
     width: 100%;
-    min-height: 1vh;
+    min-height: 0.5vh;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -10,6 +10,7 @@
   }
 .navbar--logo-holder h1{
   padding-left: 45px;
+ 
 }
 .scrolled{
   position: fixed;
@@ -28,6 +29,8 @@
   width: 200px;
   height: 92vh;
   background-color: #eee;
+  display: block;
+  float: left;
 }
 
 .vertical-menu a {
