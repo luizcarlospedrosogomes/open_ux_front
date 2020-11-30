@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>       
         <Switch>
           <Route exact path="/" component={HeatMap} />
-          <Route path="/heatmap/:name" component={DetailsHeatMap}/> 
+          <Route path="/heatmap/:id" component={DetailsHeatMap}/> 
         </Switch>
       </ BrowserRouter>
     </div>

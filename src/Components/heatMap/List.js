@@ -3,7 +3,7 @@ import { Link, BrowserRouter} from 'react-router-dom'
 
 import './HeatMap.css'
 
-const List = ({heatmaps, id}) => {
+const List = ({heatmaps, name}) => {
     return(
         <table className="table">
             <thead>
@@ -18,10 +18,10 @@ const List = ({heatmaps, id}) => {
                 {heatmaps.map((heatmap, i) =>(
                     <tr key={i}>
 
-                        <td>{heatmap.url}</td>
+                        <td>{heatmap.name}</td>
                         <td>{heatmap.url}</td>
                         <td>{(heatmap.status ? 'Ativo': 'Desativado')}</td>
-                        <td><Link to={{pathname:`/heatmap/${id}`}}>Detalhes</Link></td>
+                        <td><Link to={{pathname:`/heatmap/${heatmap._id}`}}>Detalhes</Link></td>
                     </tr>
                 ))}
             </tbody>
