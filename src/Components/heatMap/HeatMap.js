@@ -1,4 +1,5 @@
 import React from "react"
+import { Redirect } from 'react-router-dom'
 
 import {useFetch} from '../../hooks/useFetch';
 
@@ -7,15 +8,19 @@ import List from './List';
 import './HeatMap.css';
 
 const HeatMap = () => {
-   const query = {'owner':"lcpg", 'name': "teste projeto"}
+   const query  = {'owner':"lcpg", 'name': "teste projeto"}
    const params = {headers: query}
 
     const {data}    = useFetch(`projeto`, params)
-    console.log(data)
-
+    
     if(!data){        
         return <p>Buscando dados do  projeto </p>
     }
+
+    if(data.status == 401){
+        return   <Redirect to={{ pathname: "/login",  }}/>
+    }
+    
 
     return (
         <div className="content">
