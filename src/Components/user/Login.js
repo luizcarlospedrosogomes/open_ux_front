@@ -22,11 +22,10 @@ const Login = () => {
             if(response.status === 401){
                 setMsg(json.msg)
             }
-            console.log(response.status)
-            if(response.status == 200 || response.status == 201){
-                console.log("to heatmaps")
+            
+            if(response.status == 200 || response.status == 201){                
                 login(json.token)
-                return   (<Redirect to="/heatmaps"/>)
+                window.location.href = "/heatmaps"
             }
         } catch (error) {
            console.log(error) 
