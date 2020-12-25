@@ -1,0 +1,35 @@
+h1, h2 {
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+
+form { 
+    margin: 0 auto; 
+    width:550px;
+    text-align: left;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+form button{
+    height: 50px;
+    width: 40%;
+    color:red;
+    font-size: 45px;
+}
+
+.loginEmail{
+    margin-bottom: 45px;
+}
+
+.loginFooter{        
+    align-items: flex-end;
+    align-content: flex-end;
+}
+.loginButton{
+    text-align: right;
+}
+.message{
+    color: red;
+}

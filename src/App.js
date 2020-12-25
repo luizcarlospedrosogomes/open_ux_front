@@ -8,11 +8,16 @@ import {Login} from './Components/user'
 import { isAuthenticated } from "./services/auth";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
+  
   <Route
     {...rest}
-    render={props =>
+    render={props =>      
       isAuthenticated() ? (
-        <Component {...props} />
+        <>
+          <MenuTop/>      
+          <MenuLateral/>  
+          <Component {...props} />
+        </>
       ) : (
         <Redirect to={{ pathname: "/", state: { from: props.location } }} />
       )
@@ -23,9 +28,6 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 function App() {
   return (
     <div className="App">
-        
-      <MenuTop/>      
-      <MenuLateral/>      
       <BrowserRouter>       
         <Switch>          
           <Route exact path="/" component={Login}/> 

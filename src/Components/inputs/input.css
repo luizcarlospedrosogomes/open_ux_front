@@ -1,0 +1,51 @@
+
+.textField{
+    width: 100%;    
+    
+}
+.textField input[type="text"], .textField input[type="password"], .textField input[type="email"]{
+    width: 100%;
+    margin-top: 0;
+    font-weight: 500;    
+    padding:10px;
+    border:0;
+    box-shadow:0 0 5px 4px rgba(0,0,0,0.06);
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
+    border-bottom: 1px solid;
+}
+
+.textField label{        
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+input[type="submit"]{    
+    background: black;
+	border: none;
+	padding: 10px 20px 10px 20px;
+	border-bottom: 3px solid white;
+	border-radius: 3px;
+	color: white;
+}
+input[type="submit"]:hover{  
+    background: #343a40;
+    cursor: pointer;
+}
