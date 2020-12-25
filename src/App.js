@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import './App.css';
 import {MenuTop, MenuLateral} from './Components/Menus'
 import {HeatMap, Details as DetailsHeatMap} from './Components/heatMap'
-import {Login} from './Components/user'
+import {Login, Logout} from './Components/user'
 
 import { isAuthenticated } from "./services/auth";
 
@@ -33,6 +33,7 @@ function App() {
           <Route exact path="/" component={Login}/> 
           <Route path="/login" component={Login}/> 
           <PrivateRoute path="/heatmaps" component={HeatMap} />
+          <PrivateRoute path="/logout" component={Logout} />
           <Route path="*" component={() => <h1>Page not found</h1>} />
         </Switch>
       </ BrowserRouter>

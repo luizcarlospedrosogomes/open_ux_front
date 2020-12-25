@@ -26,7 +26,7 @@ const Login = () => {
             if(response.status == 200 || response.status == 201){
                 console.log("to heatmaps")
                 login(json.token)
-                return   <Redirect to={{ pathname: "/heatmaps",  }}/>
+                return   (<Redirect to="/heatmaps"/>)
             }
         } catch (error) {
            console.log(error) 
