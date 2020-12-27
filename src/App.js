@@ -34,6 +34,7 @@ function App() {
           <Route path="/login" component={Login}/> 
           <PrivateRoute path="/heatmaps" component={HeatMap} />
           <PrivateRoute path="/logout" component={Logout} />
+          <PrivateRoute path="/heatmap/:id" component={DetailsHeatMap} />
           <Route path="*" component={() => <h1>Page not found</h1>} />
         </Switch>
       </ BrowserRouter>

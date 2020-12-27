@@ -8,15 +8,12 @@ import List from './List';
 import './HeatMap.css';
 
 const HeatMap = () => {
-   const query  = {'owner':"lcpg", 'name': "teste projeto"}
-   const params = {headers: query}
-
-    const {data}    = useFetch(`projeto`, params)
+    const {data}    = useFetch(`projeto`)
     
     if(!data){        
         return <p>Buscando dados do  projeto </p>
     }
-
+    console.log(data)
     if(data.status == 401){
         return   <Redirect to={{ pathname: "/login",  }}/>
     }
