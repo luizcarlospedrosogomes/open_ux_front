@@ -1,5 +1,5 @@
 import React from "react"
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 
 import {useFetch} from '../../hooks/useFetch';
 
@@ -8,16 +8,15 @@ import List from './List';
 import './HeatMap.css';
 
 const HeatMap = () => {
-    const {data}    = useFetch(`projeto`)
+    const {data}    = useFetch(`heatmap`)
     
-    if(!data){        
-        return <p>Buscando dados do  projeto </p>
-    }
     console.log(data)
-    if(data.status == 401){
-        return   <Redirect to={{ pathname: "/login",  }}/>
-    }
+
+    if(!data) return <p>Buscando HeatMap </p>;    
     
+    if(data.status == 401) return <Redirect to={{ pathname: "/login",  }}/>;
+    
+    if(data.status == 404)  return <p>Nenhum Heatmap cadastrado. <Link to="/heatmap/new">Novo</Link></p>
 
     return (
         <div className="content">
