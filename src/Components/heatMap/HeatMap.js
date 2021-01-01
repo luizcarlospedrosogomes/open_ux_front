@@ -22,7 +22,7 @@ const HeatMap = () => {
         <div className="content">
             <div>{process.env.API_URL}</div>
             <h2>HeatMaps</h2>
-            <List heatmaps={data.heatMaps} name={data.name}/>
+            <List heatmaps={data} name={data.name}/>
         </div>
     )
 }
