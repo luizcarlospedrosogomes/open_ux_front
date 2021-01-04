@@ -3,7 +3,7 @@ import "./Menu.css"
 
 const MenuLateral = () => (
     <div className="vertical-menu">
-      <a href="#" className="active">HeatMap</a>
+      <a href="/heatmaps" className="active">HeatMap</a>
       <a href="#">Formulários</a>
       <a href="#">Gravações de tela</a>
       <a href="#">Tutorial Builder</a>           

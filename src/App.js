@@ -2,7 +2,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
 import './App.css';
 import {MenuTop, MenuLateral} from './Components/Menus'
-import {HeatMap, Details as DetailsHeatMap, New as HeatMapNew} from './Components/heatMap'
+import {HeatMap, Details as DetailsHeatMap, New as HeatMapNew} from './Pages/heatMap'
 import {Login, Logout} from './Components/user'
 
 import { isAuthenticated } from "./services/auth";

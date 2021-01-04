@@ -1,7 +1,7 @@
 import { React, useState} from "react";
 import { Redirect, Link } from 'react-router-dom';
 //componentes
-import {TextField, Submit} from '../inputs/index';
+import {TextField, Submit} from '../../Components/inputs/index';
 //hooks
 import {useFetch} from '../../hooks/useFetch';
 import useForm from '../../hooks/useForm';
@@ -16,14 +16,14 @@ const New = () => {
         setMsg('')
         try {
             let response = await api.post("/heatmap", values) 
-            console.log(response.status)   
+            console.log(response)   
             if(response.status == 401) return <Redirect to={{ pathname: "/logout",  }}/>
             if(response.status == 200 || response.status == 201) return window.location.href = "/heatmaps";
             
             
         }catch(error){
             setMsg(error.response.data.msg)
-            console.log(error.response.data.msg)
+            console.log(error.response)
         }
     }
 
